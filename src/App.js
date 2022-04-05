@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/Navbar';
 import ItemListContainer from './components/ItemListContainer';
 
-function App() {
+const App = () => {
   return (
     <div>
       <Navbar></Navbar>
