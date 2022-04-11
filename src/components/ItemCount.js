@@ -13,11 +13,11 @@ const ItemCount = (props) => {
         }
     }
     return(
-        <div class="btn-group" role="group" aria-label="Basic outlined example">
-            <button type="button" class="btn btn-outline-primary" onClick={increment}>+</button>
+        <div className="btn-group" role="group" aria-label="Basic outlined example">
+            <button type="button" className="btn btn-outline-primary" onClick={increment}>+</button>
             <button type="disabled">{rate}</button>
-            <button type="button" class="btn btn-outline-primary" onClick={decrease}>-</button>
-            <button type="button" class="btn btn-success">Add to Cart</button>
+            <button type="button" className="btn btn-outline-primary" onClick={decrease}>-</button>
+            <button type="button" className="btn btn-success">Add to Cart</button>
         </div>
     )
 }
