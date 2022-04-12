@@ -1,14 +1,14 @@
 import { useState } from "react";
 
-const ItemCount = (props) => {
-    const[rate, setRate] = useState(1); //ESTO ES UN HOOK
+const ItemCount = ({initial, stock, onAdd}) => {
+    const[rate, setRate] = useState(initial); //ESTO ES UN HOOK
     const increment = () => {
-        if(rate < 5){
+        if(rate < stock){
             setRate(rate+1);
         }
     }
     const decrease = () => {
-        if(rate > 1){
+        if(rate > initial){
             setRate(rate-1);
         }
     }
@@ -17,7 +17,7 @@ const ItemCount = (props) => {
             <button type="button" className="btn btn-outline-primary" onClick={increment}>+</button>
             <button type="disabled">{rate}</button>
             <button type="button" className="btn btn-outline-primary" onClick={decrease}>-</button>
-            <button type="button" className="btn btn-success">Add to Cart</button>
+            <button type="button" className="btn btn-success" onClick={() => onAdd={rate}}>Add to Cart</button>
         </div>
     )
 }
