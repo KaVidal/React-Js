@@ -13,79 +13,74 @@ const products = [
     {
       id: 1,
       name: "Brownies",
-      stock: "10 unidades",
-      cost: "$80",
+      stock: 10,
+      cost: "80",
       image: brownies
     },
     {
       id: 2,
       name: "Chipa",
-      stock: "30 unidades",
-      cost: "$60",
+      stock: 30,
+      cost: "60",
       image: chipa
     },
     {
       id: 3,
       name: "Alfajores",
-      stock: "50 unidades",
-      cost: "$80",
+      stock: 50,
+      cost: "80",
       image: alfajores
     },
     {
       id: 4,
       name: "Cupcakes",
-      stock: "100 unidades",
-      cost: "$70",
+      stock: 100,
+      cost: "70",
       image: cupcakes
     },
     {
       id: 5,
       name: "Dripcake Rosa",
-      stock: "20 unidades",
-      cost: "$1000",
+      stock: 20,
+      cost: "1000",
       image:dripcakeRosa
     },
     {
       id: 6,
       name: "Torta Corazones",
-      stock: "15 unidades",
-      cost: "$650",
+      stock: 15,
+      cost: "650",
       image: tortaCorazones
     },
     {
       id: 7,
       name: "Torta Brownie",
-      stock: "15 unidades",
-      cost: "$750",
+      stock: 15,
+      cost: "750",
       image: tortaBrownie
     },
     {
       id: 8,
       name: "Torta Flores",
-      stock: "10 unidades",
-      cost: "$900",
+      stock: 10,
+      cost: "900",
       image: tortaFlores
     },
     {
       id: 9,
       name: "Carrot Cake",
-      stock: "5 unidades",
-      cost: "$700",
+      stock: 5,
+      cost: "700",
       image: carrotCake
     },
     {
       id: 10,
       name: "Torta Casamiento Dos Pisos",
-      stock: "15 unidades",
-      cost: "$2000",
+      stock: 15,
+      cost: "2000",
       image: tortaCasamientoDosPisos
     }
   ];
 
-  export const getProducts = () => {
-    return new Promise((resolve, reject) => {
-      setTimeout(() => {
-        return resolve(products);
-      }, 2000)
-    })
-  }
+  export default products
+  

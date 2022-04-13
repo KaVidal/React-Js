@@ -2,18 +2,18 @@ import { useEffect, useState } from "react";
 import { Wrapper } from './styledComponents';
 import ItemCount from "./ItemCount";
 import ItemList from "./ItemList";
-import { getProducts } from "../assets/products";
+import customFetch from "../assets/customFetch";
+/* import Item from "./Item"; */
+import products from "../assets/products";
 
 
 const ItemListContainer = ({greeting}) => {
-    const [products, setProducts] = useState([]);
+    const [productos, setProducts] = useState([]);
 
     useEffect(() => {
-        async function mostrarProductos() {
-            let todosProductos = await getProducts();
-            setProducts(todosProductos);
-        }
-        mostrarProductos()
+        customFetch(2000, products)
+            .then(result => setProducts(result))
+            .catch(err => console.log(err))
     }, []);
 
     const onAdd = (qty) => {
@@ -23,7 +23,7 @@ const ItemListContainer = ({greeting}) => {
     return(
         <>
             <Wrapper>{greeting}</Wrapper>
-            <ItemList productos = {products}></ItemList>
+            <ItemList productos = {productos}></ItemList>
             <ItemCount stock={5} initial={1} onAdd={onAdd}></ItemCount>
         </>
     );
