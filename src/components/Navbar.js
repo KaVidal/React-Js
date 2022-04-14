@@ -27,10 +27,10 @@ const Navbar = () => {
                                 </ul>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Sobre Mí</a>
+                                <a className="nav-link" href="#">Dulce</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#">Contacto</a>
+                                <a className="nav-link" href="#">Salado</a>
                             </li>
                         </ul>
                         <form className="d-flex">

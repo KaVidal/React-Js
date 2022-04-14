@@ -1,19 +1,25 @@
 import { useEffect, useState } from "react";
-import { Wrapper } from './styledComponents';
-import ItemCount from "./ItemCount";
 import ItemList from "./ItemList";
 import customFetch from "../assets/customFetch";
-/* import Item from "./Item"; */
 import products from "../assets/products";
+import { useParams } from "react-router-dom";
 
 
-const ItemListContainer = ({greeting}) => {
+const ItemListContainer = ({}) => {
     const [productos, setProducts] = useState([]);
+    const{idCategory} = useParams(); //OTRO HOOK
 
     useEffect(() => {
-        customFetch(2000, products)
+        if(idCategory == undefined){
+            customFetch(2000, products)
+                .then(result => setProducts(result))
+                .catch(err => console.log(err))
+        } else{
+            customFetch(2000, products[0])
             .then(result => setProducts(result))
             .catch(err => console.log(err))
+        }   
+            console.log(idCategory);
     }, []);
 
     const onAdd = (qty) => {
@@ -22,9 +28,7 @@ const ItemListContainer = ({greeting}) => {
 
     return(
         <>
-            <Wrapper>{greeting}</Wrapper>
             <ItemList productos = {productos}></ItemList>
-            <ItemCount stock={5} initial={1} onAdd={onAdd}></ItemCount>
         </>
     );
 }
