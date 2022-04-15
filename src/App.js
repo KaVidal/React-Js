@@ -11,8 +11,8 @@ const App = () => {
       <Navbar></Navbar>
       <Routes>
         <Route path='/' element={<ItemListContainer greeting="PRÓXIMAMENTE TODOS LOS PRODUCTOS DE VEGANNDY"/>} />
-        <Route path='/category/:id' element={<ItemListContainer greeting="PRÓXIMAMENTE TODOS LOS PRODUCTOS DE VEGANNDY"/>} />
-        <Route path='/item/:id' element={<ItemDetailContainer />} />   
+        <Route path='/category/:idCategory' element={<ItemListContainer greeting="PRÓXIMAMENTE TODOS LOS PRODUCTOS DE VEGANNDY"/>} />
+        <Route path='/item/:idItem' element={<ItemDetailContainer />} />   
       </Routes>
     </BrowserRouter>
   );

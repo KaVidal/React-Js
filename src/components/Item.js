@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
@@ -20,16 +21,16 @@ export default function Item({id, name, stock, cost, image}) {
                     {name}
                 </Typography>
                 <Typography variant="subtitle1" color="text.secondary" component="div">
-                    {stock}
+                    {stock} unidades
                 </Typography>
                 <Typography variant="body2">
-                    {cost}
+                    ${cost}
                 </Typography>
                 </CardContent>
             </CardActionArea>
             <CardActions>
                 <Button size="small" color="primary">
-                Ver Más
+                <Link to={`/item/${id}`}>Ver Más</Link>
                 </Button>
             </CardActions>
         </Card>

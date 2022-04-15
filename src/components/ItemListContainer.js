@@ -15,12 +15,12 @@ const ItemListContainer = ({}) => {
                 .then(result => setProducts(result))
                 .catch(err => console.log(err))
         } else{
-            customFetch(2000, products[0])
+            customFetch(2000, products.filter(producto => producto.categoryId == parseInt(idCategory)))
             .then(result => setProducts(result))
             .catch(err => console.log(err))
         }   
-            console.log(idCategory);
-    }, []);
+/*             console.log(idCategory); */
+    }, [idCategory]);
 
     const onAdd = (qty) => {
         alert("Elegiste " + qty + " productos");

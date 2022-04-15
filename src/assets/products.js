@@ -12,6 +12,7 @@ import tortaCasamientoDosPisos from "../assets/images/TortaFloresCasamiento.png"
 const products = [
     {
       id: 1,
+      categoryId: 2,
       category: {
         name: "Dulce",
         id: 2
@@ -23,6 +24,7 @@ const products = [
     },
     {
       id: 2,
+      categoryId: 4,
       category: {
         name: "Salado",
         id: 4
@@ -34,6 +36,7 @@ const products = [
     },
     {
       id: 3,
+      categoryId: 2,
       category: {
         name: "Dulce",
         id: 2
@@ -45,6 +48,7 @@ const products = [
     },
     {
       id: 4,
+      categoryId: 2,
       category: {
         name: "Dulce",
         id: 2
@@ -56,6 +60,7 @@ const products = [
     },
     {
       id: 5,
+      categoryId: 2,
       category: {
         name: "Dulce",
         id: 2
@@ -67,6 +72,7 @@ const products = [
     },
     {
       id: 6,
+      categoryId: 2,
       category: {
         name: "Dulce",
         id: 2
@@ -78,6 +84,7 @@ const products = [
     },
     {
       id: 7,
+      categoryId: 2,
       category: {
         name: "Dulce",
         id: 2
@@ -89,6 +96,7 @@ const products = [
     },
     {
       id: 8,
+      categoryId: 2,
       category: {
         name: "Dulce",
         id: 2
@@ -99,7 +107,8 @@ const products = [
       image: tortaFlores
     },
     {
-      id: 2,
+      id: 9,
+      categoryId: 2,
       category: {
         name: "Dulce",
         id: 2
@@ -111,6 +120,7 @@ const products = [
     },
     {
       id: 10,
+      categoryId: 2,
       category: {
         name: "Dulce",
         id: 2

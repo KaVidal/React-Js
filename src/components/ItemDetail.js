@@ -19,8 +19,7 @@ const ItemDetail = ({item}) => {
                   {item.name}
                 </Typography>
                 <Typography variant="body2" gutterBottom>
-                  Torta estilo dripcake con baño de chocolate, decorada con
-                  crema chantilly y alfajorcitos
+                  Descripción
                 </Typography>
               </Grid>
               <Grid item xs>
