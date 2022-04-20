@@ -1,12 +1,16 @@
-import ItemCount from "./ItemCount";
+import ItemCount from './ItemCount';
+import { useState } from 'react';
 import * as React from 'react';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import GoToCart from './GoToCart';
 
 const ItemDetail = ({item}) => {
+    const [itemCount, setItemCount] = useState(0);
 
     const onAdd = (qty) => {
         alert("You have selected " + qty + " items.");
+        setItemCount(qty);
     }
 
     return(
@@ -33,7 +37,11 @@ const ItemDetail = ({item}) => {
                 </Typography>
               </Grid>
               <Grid item xs>
-                <ItemCount stock={item.stock} initial={1} onAdd={onAdd}></ItemCount>
+                {
+                  itemCount === 0
+                  ? <ItemCount stock={item.stock} initial={itemCount} onAdd={onAdd}></ItemCount>
+                  : <GoToCart/>
+                }
               </Grid>
             </Grid>
           </Grid>
