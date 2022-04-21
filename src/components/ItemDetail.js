@@ -1,16 +1,19 @@
 import ItemCount from './ItemCount';
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import * as React from 'react';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import GoToCart from './GoToCart';
+import { CartContext } from '../context/CartContext';
 
 const ItemDetail = ({item}) => {
     const [itemCount, setItemCount] = useState(0);
+    const add = useContext(CartContext);
 
     const onAdd = (qty) => {
         alert("You have selected " + qty + " items.");
         setItemCount(qty);
+        add.addToCart(item);
     }
 
     return(
