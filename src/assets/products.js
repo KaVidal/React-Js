@@ -7,7 +7,7 @@ import tortaCorazones from "../assets/images/TortaCorazones.png";
 import tortaBrownie from "../assets/images/TortaBrownie.png";
 import tortaFlores from "../assets/images/TortaFloresPintadas.png";
 import carrotCake from "../assets/images/TortaCarrot.png";
-import tortaCasamientoDosPisos from "../assets/images/TortaFloresCasamiento.png";
+import tortaCasamientoDosPisos from "../assets/images/TortaGrandeCasamiento.png";
 
 const products = [
     {
@@ -68,7 +68,7 @@ const products = [
       name: "Dripcake Rosa",
       stock: 20,
       cost: "1000",
-      image:dripcakeRosa
+      image: dripcakeRosa
     },
     {
       id: 6,
@@ -132,5 +132,5 @@ const products = [
     }
   ];
 
-  export default products
+  export default products;
   

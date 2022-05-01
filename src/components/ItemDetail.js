@@ -4,7 +4,7 @@ import * as React from 'react';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import GoToCart from './GoToCart';
-import { CartContext } from '../context/CartContext';
+import { CartContext } from '../components/CartContext';
 
 const ItemDetail = ({item}) => {
     const [itemCount, setItemCount] = useState(0);
