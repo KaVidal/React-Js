@@ -20,7 +20,7 @@ const ItemListContainer = ({}) => {
         fetchFromFirestore()
         .then(result => setProducts(result))
         .catch(err => console.log(err));
-    }, [productos]);
+    }, [idCategory]);
 
     const onAdd = (qty) => {
         alert("Elegiste " + qty + " productos");
