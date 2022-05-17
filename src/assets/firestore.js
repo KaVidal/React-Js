@@ -3,7 +3,6 @@ import { doc, getDoc, orderBy } from "firebase/firestore";
 import { collection, query, where, getDocs } from "firebase/firestore";
 
 export const firestoreFetch = async(idCategory) => {
-
     let q;
     if(idCategory){
         q = query(collection(db, "products"), where('categoryId', '==', idCategory));
@@ -16,7 +15,7 @@ export const firestoreFetch = async(idCategory) => {
         id: document.id,
         ...document.data()
     }));
-    return dataFromFirestore
+    return dataFromFirestore;
 }
 
 export const firestoreFetchOne = async (idItem) => {

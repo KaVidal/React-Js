@@ -27,10 +27,10 @@ const Navbar = () => {
                                 </ul>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/category/2">Dulce</a>
+                                <a className="nav-link" href="/category/Dulce">Dulce</a>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="/category/4">Salado</a>
+                                <a className="nav-link" href="/category/Salado">Salado</a>
                             </li>
                         </ul>
                         <SearchForm></SearchForm>

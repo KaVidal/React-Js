@@ -12,7 +12,7 @@ import tortaCasamientoDosPisos from "../assets/images/TortaGrandeCasamiento.png"
 const products = [
     {
       id: 1,
-      categoryId: 2,
+      categoryId: "Dulce",
       category: {
         name: "Dulce",
         id: 2
@@ -24,7 +24,7 @@ const products = [
     },
     {
       id: 2,
-      categoryId: 4,
+      categoryId: "Salado",
       category: {
         name: "Salado",
         id: 4
@@ -36,7 +36,7 @@ const products = [
     },
     {
       id: 3,
-      categoryId: 2,
+      categoryId: "Dulce",
       category: {
         name: "Dulce",
         id: 2
@@ -48,7 +48,7 @@ const products = [
     },
     {
       id: 4,
-      categoryId: 2,
+      categoryId: "Dulce",
       category: {
         name: "Dulce",
         id: 2
@@ -60,7 +60,7 @@ const products = [
     },
     {
       id: 5,
-      categoryId: 2,
+      categoryId: "Dulce",
       category: {
         name: "Dulce",
         id: 2
@@ -72,7 +72,7 @@ const products = [
     },
     {
       id: 6,
-      categoryId: 2,
+      categoryId: "Dulce",
       category: {
         name: "Dulce",
         id: 2
@@ -84,7 +84,7 @@ const products = [
     },
     {
       id: 7,
-      categoryId: 2,
+      categoryId: "Dulce",
       category: {
         name: "Dulce",
         id: 2
@@ -96,7 +96,7 @@ const products = [
     },
     {
       id: 8,
-      categoryId: 2,
+      categoryId: "Dulce",
       category: {
         name: "Dulce",
         id: 2
@@ -108,7 +108,7 @@ const products = [
     },
     {
       id: 9,
-      categoryId: 2,
+      categoryId: "Dulce",
       category: {
         name: "Dulce",
         id: 2
@@ -120,7 +120,7 @@ const products = [
     },
     {
       id: 10,
-      categoryId: 2,
+      categoryId: "Dulce",
       category: {
         name: "Dulce",
         id: 2

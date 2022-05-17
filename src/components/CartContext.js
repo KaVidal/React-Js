@@ -33,8 +33,13 @@ const CartContextProvider = ({children}) => {
         setCartList([]);
     }
 
+    const calcQtyItems = () =>{
+        let qtys = cartList.map(item => item.qtyItem);
+        return qtys.reduce(((previousValue, currentValue) => previousValue + currentValue), 0);
+    }
+
     return(
-        <CartContext.Provider value={{cartList, addToCart, clear, removeItem}}> {/* está envuelto en un objeto */}
+        <CartContext.Provider value={{cartList, addToCart, clear, removeItem, calcQtyItems}}> {/* está envuelto en un objeto */}
             {children}
         </CartContext.Provider>
     );

@@ -1,35 +1,26 @@
 import { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
-import { collection, doc, getDocs } from "firebase/firestore";
-import db from "../assets/firebaseConfig";
+import { firestoreFetch } from "../assets/firestore";
 
-const ItemListContainer = ({}) => {
+const ItemListContainer = () => {
     const [productos, setProducts] = useState([]);
     const{idCategory} = useParams(); //OTRO HOOK
 
     useEffect(() => {
-        const fetchFromFirestore = async () => {
-            const querySnapshot = await getDocs(collection(db, "products"));
-            const dataFromFirestore = querySnapshot.docs.map((doc) => ({
-                id: doc.id,
-                ...doc.data() 
-            })); 
-            return dataFromFirestore;
-        }
-        fetchFromFirestore()
+        firestoreFetch()
         .then(result => setProducts(result))
         .catch(err => console.log(err));
     }, [idCategory]);
 
-    const onAdd = (qty) => {
-        alert("Elegiste " + qty + " productos");
-    }
+    useEffect(() => {
+        return(() => {
+            setProducts([]);
+        })
+    }, []);
 
     return(
-        <>
-            <ItemList productos = {productos}></ItemList>
-        </>
+        <ItemList productos = {productos}></ItemList>
     );
 }
 
