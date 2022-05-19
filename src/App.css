@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  background-color: blueviolet;
+  background-color: rgb(241, 183, 193);
   color: beige;
 }
 
@@ -37,8 +37,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.navbar-nav{
-  align-items: center;
 }

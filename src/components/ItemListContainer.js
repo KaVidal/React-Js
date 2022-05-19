@@ -9,8 +9,8 @@ const ItemListContainer = () => {
 
     useEffect(() => {
         firestoreFetch()
-        .then(result => setProducts(result))
-        .catch(err => console.log(err));
+            .then(result => setProducts(result))
+            .catch(err => console.log(err));
     }, [idCategory]);
 
     useEffect(() => {

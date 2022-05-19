@@ -8,11 +8,11 @@ import { Button, CardActionArea, CardActions } from '@mui/material';
 
 export default function Item({id, name, stock, cost, image}) {
     return(
-        <Card sx={{ maxWidth: 345 }} key={id}>
+        <Card sx={{ display: 'grid', p: 1, m: 0.5 }} key={id}>
             <CardActionArea>
                 <CardMedia
                 component="img"
-                height="140"
+                height="75%"
                 image={image}
                 alt="Imagen"
                 />

@@ -5,7 +5,6 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { Link } from 'react-router-dom';
-import { CardMedia } from '@mui/material';
 import { useContext } from "react";
 import { CartContext } from "../components/CartContext";
 import Table from '@mui/material/Table';
@@ -95,8 +94,8 @@ const Cart = () => {
     }
 
     return(
-        <Box sx={{maxWidth: '500%', maxHeight: '500%', bgcolor: 'pink' }}>
-            <Grid container justifyContent="center" spacing={0}>
+        <Box>
+            <Grid container justifyContent="center" sx={{bgcolor: 'beige'}}>
                     <h1>Carrito de Compras</h1>
                 <Grid container justifyContent="flex-start" spacing={0}>
                     <Button size="large">
@@ -113,45 +112,46 @@ const Cart = () => {
             </Grid>
             {
                 test.cartList.length > 0 && (
-                    <Grid container spacing={-5}>
+                    <Grid container sx={{margin: 2}}>
                         {
                             test.cartList.map(item =>
-                                <Grid item xs= "100%" width="100%" container direction="row" spacing={0} key={item.idItem}>
-                                    <CardMedia
-                                        component="img"
-                                        sx={{ width: "10%" }}
-                                        image= {item.imgItem}
-                                        alt="Producto elegido"
-                                    />
-                                    <Grid item xs= "100%">
-                                        <Typography gutterBottom variant="h5" component="div">
-                                            {item.nameItem}
-                                        </Typography>
-                              
-                                        <Typography gutterBottom variant="h6" component="div">
-                                            $ {item.costItem} c/u
-                                        </Typography>
-
-                                        <Typography color="text.secondary" component="div">
-                                            {item.qtyItem} seleccionado(s)
-                                        </Typography>
+                                <Grid container spacing={2} key={item.idItem}>
+                                    <Grid item sx={{margin: 1}}>
+                                        <img src={item.imgItem}/>
                                     </Grid>
-                                    <Grid container>
-                                        <Button size="large" onClick={() => test.removeItem(item.idItem)} startIcon={<DeleteIcon />} style={{color: "red"}}>Eliminar</Button>
+                                    <Grid item xs={12} sm container>
+                                        <Grid item xs container direction="column" spacing={2}>
+                                            <Grid item xs>
+                                            <Typography gutterBottom variant="h5" component="div">
+                                                {item.nameItem}
+                                            </Typography>
+                                            <Typography variant="h6" color="black">
+                                                $ {item.costItem} c/u
+                                            </Typography>
+                                            </Grid>
+                                            <Grid item xs>
+                                            <Typography color="grey" component="div">
+                                                 {item.qtyItem} seleccionado(s)
+                                            </Typography>
+                                            </Grid>
+                                            <Grid item xs>
+                                            <Button size="large" onClick={() => test.removeItem(item.idItem)} startIcon={<DeleteIcon />} style={{color: "red"}}>Eliminar</Button>
+                                            </Grid>
+                                        </Grid>
                                     </Grid>
                                 </Grid>
                             )
                         }
 
-                        <TableContainer component={Paper}>
-                            <Table sx={{  maxWidth: '100%'}} aria-label="spanning table">
+                        <TableContainer sx={{  maxWidth: '80%', border: 1, margin: 1}} component={Paper}>
+                            <Table aria-label="spanning table">
                                 <TableHead>
                                     <TableRow>
-                                        <TableCell align="center" colSpan={4}>
+                                        <TableCell align="center" colSpan={4} sx={{bgcolor: 'black', color: 'white'}}>
                                         RESUMEN DE COMPRA
                                         </TableCell>
                                     </TableRow>
-                                    <TableRow>
+                                    <TableRow sx={{bgcolor: 'lightgray'}}>
                                         <TableCell>Productos</TableCell>
                                         <TableCell align="right">Cantidad</TableCell>
                                         <TableCell align="right">Unidad</TableCell>
