@@ -8,7 +8,7 @@ const ItemListContainer = () => {
     const{idCategory} = useParams(); //OTRO HOOK
 
     useEffect(() => {
-        firestoreFetch()
+        firestoreFetch(idCategory)
             .then(result => setProducts(result))
             .catch(err => console.log(err));
     }, [idCategory]);
